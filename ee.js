@@ -1,3 +1,3 @@
 document.getElementById("downloadBtn").addEventListener("click", function() {
-    window.location.href = "https://github.com/Star00000000/M-HK";
+    window.location.href = "https://www.google.com/search?q=%D8%AC%D9%88%D8%AC%D9%84+%D8%AF%D8%B1%D8%A7%D9%8A%D9%81&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIHCAAQRRixATIJCAEQIxgnGOoCMgkIAhAjGCcY6gIyCQgDECMYJxjqAjIJCAQQIxgnGOoCMgkIBRAjGCcY6gIyCQgGECMYJxjqAjIJCAcQIxgnGOoCMgkICBAjGCcY6gIyCQgJECMYJxjqAjIJCAoQIxgnGOoCMg8ICxAuGCcYxwEY6gIY0QMyCQgMECMYJxjqAjIJCA0QIxgnGOoCMgkIDhAjGCcY6gIyDwgPEC4YAxiPARi0AhjqAjIRCBAQABgDGEIYjwEYtAIY6gIyEQgREAAYAxhCGI8BGLQCGOoCMhEIEhAAGAMYQhiPARi0AhjqAjIRCBMQABgDGEIYjwEYtAIY6gLSAQYtMWowajeoAhSwAgE&client=ms-android-xiaomi-rvo3&sourceid=chrome-mobile&ie=UTF-8";
 });
