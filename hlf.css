@@ -1,90 +1,156 @@
+html[lang="ar"] {
+    
+  background-color: #151515; /* يمكن تغيير هذه القيمة إلى اللون الذي ترغب فيه */
+}
+
+/* إعدادات لشريط الشعارات */
+/* يجب استبدال "your-tab-bar-class" بالفئة الفعلية لشريط الشعارات في موقع الويب الخاص بك */
+.your-tab-bar-class {
+  background-color: #151515; /* يمكن تغيير هذه القيمة إلى اللون المناسب لشريط الشعارات */
+  color: #FFFFF1FD; /* لون النص داخل شريط الشعارات */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* تدعم اللغة العربية */
+}
+
+body {
+    background: linear-gradient(to right bottom, #262626, #000000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+
 div:nth-child(1) {
-    background: linear-gradient(to right bottom, #5953FF, #5217B5);
+    backgجround: linear-gradient(to right bottom, #5953FF, #5217B5);
     border: none;
-    height:70px;
-    width: 100vw;
+    height: 70px;
+    width: 100%;
 }
 
 img {
-  margin: 0;
-  padding: 0;
-  height:70px;
-  width: 200px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-130%);
 }
-body {
-  background: linear-gradient(to right bottom, #262626, #000000);
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column; /* يحافظ على الترتيب العمودي */
-  justify-content: flex-start; /* يبدأ المحتوى من أعلى الصفحة */
-  align-items: flex-start; /* يحاذي العناصر من الجانب الأيسر */
-}
+
 div:nth-child(2) img {
     position: relative;
-  left: 63%;
-  transform: translateX(-50%);
-  height: 200px; /* طول الصورة */
-  width: 300px/* للحفاظ على تناسب النسب */
-}
-#downloadBtn {
-  background-color: green; /* لون الزر */
-  color: white;
-  padding: 20px 70px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px;
-  margin-bottom: 30px;
+    left: 55%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 300px;
 }
 
-#downloadBtn:hover {
-  border-radius: 5px;
-  background-color: darkgreen; /* تغيير لون الزر عند التحوي عليه */
-}
-div:nth-child(3) #downloadBtn {
-  position: relative;
-  left: 25%;
-  
-}
-div:nth-child(4) h3{
-  background-color: #262626;
-  margin: 5px;
-      position: relative;
-  left: 70%;
-  border-radius: 5px;
-  
-    margin: 5px;
-  padding: px;
-}
-h3 {
-color: #FFFFFF;
-  margin: 0px;
-  padding: 5px;
-}
-.app-description {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #1C1C1C;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.app-description h2 {
-    color: #F8B72B;
-    font-size: 2em;
-}
-.app-description ul {
-    text-align: left;
-    margin-left: 20px;
+.app-details {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    text-align: center;
 }
 
-.app-description ul li {
-    color: #2196F3;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+.app-details h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
+
+.app-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    direction: ltr; /* تعكيس الاتجاه */
+}
+
+.app-details th, .app-details td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: right;
+}
+
+.app-details th {
+    background-color: #333;
+}
+
+.app-details td strong {
+    color: #f9ab00;
+}
+
+.course-details th {
+    background-color: #555;
+    color: #fff;
+}
+
+.course-details td {
+    background-color: #333;
+    color: #fff;
+}
+#downloadBtn {   
+    background-color: green;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px auto;
+    width: 80vw; 
+    display: block; /* إظهار الزر بشكل افتراضي */
+    position: fixed; /* تحديد وضعية ثابتة للزر */
+    bottom: 20px; /* بعيدًا قليلاً عن الأسفل لتجنب التداخل مع الحواف */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease; /* تأثير انتقالي عند التمرير */
+    opacity: 1; /* تأكد من عدم اختفاء الزر عند تطبيق التأثير */
+}
+
+body.scrolled #downloadBtn {
+    transform: translateY(100px); /* نقل الزر إلى الأسفل عند التمرير لأسفل */
+    opacity: 0; /* جعل الزر شفافًا أثناء التأثير */
+}
+
+body.scrolled #downloadBtn {
+    transform: translateY(100px); /* نقل الزر إلى الأسفل عند التمرير لأسفل */
+    opacity: 0; /* جعل الزر شفافًا أثناء التأثير */
+}
+
+/* إضافة خاصية الإخفاء */
+.hide {
+    display: none;
+}
+
+/* ثم عند التمرير، قم بتغيير الخصائص للعرض */
+body.scrolled #downloadBtn {
+    transform: translateY(100%);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url('eerr.ttf');
+}
+
+body {
+    font-family: myFont, Arial, sans-serif;
+}
+#iioo {   
+    background-color: green;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    width: 90vw; 
+        }
