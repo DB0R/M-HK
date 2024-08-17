@@ -1,9 +1,9 @@
 document.getElementById("downloadBtn").addEventListener("click", function() {
-  window.location.href = "https://www.mediafire.com/file/p9aqhcj15nw6ikk/%25D8%25A7%25D9%2584%25D9%2582%25D9%2584%25D8%25B9%25D9%2587_%25D8%25A7%25D9%2584%25D8%25AD%25D9%2585%25D8%25B1%25D8%25A7%25D8%25A1.apk/file";
+  window.location.href = "https://www.mediafire.com/file/9wenxisd8y6ul42/القلعة+الحمراء_7.0.apk/file";
 });
 
 document.getElementById("iioo").addEventListener("click", function() {
-  window.location.href = "https://www.mediafire.com/file/p9aqhcj15nw6ikk/%25D8%25A7%25D9%2584%25D9%2582%25D9%2584%25D8%25B9%25D9%2587_%25D8%25A7%25D9%2584%25D8%25AD%25D9%2585%25D8%25B1%25D8%25A7%25D8%25A1.apk/file";
+  window.location.href = "128307";
 });
 window.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
