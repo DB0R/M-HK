@@ -3,7 +3,7 @@ document.getElementById("downloadBtn").addEventListener("click", function() {
 });
 
 document.getElementById("iioo").addEventListener("click", function() {
-  window.location.href = "128307";
+  window.location.href = "https://www.mediafire.com/file/9wenxisd8y6ul42/القلعة+الحمراء_7.0.apk/file";
 });
 window.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
