@@ -3,30 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="موقع تحميل التطبيق الحصري للقلعة الحمراء. تعرف على مزايا التطبيق واحصل عليه بسهولة من خلال رابط التنزيل.">
-    <meta name="keywords" content="تحميل, تطبيق, القلعة الحمراء, تنزيل, apk">
-    <meta name="author" content="اسمك أو اسم شركتك">
-    <meta property="og:title" content="تحميل تطبيق القلعة الحمراء">
-    <meta property="og:description" content="موقع تحميل تطبيق القلعة الحمراء بكل سهولة وأمان.">
-    <meta property="og:image" content="رابط الصورة المصغرة هنا">
-    <meta property="og:url" content="رابط الموقع هنا">
-    <meta name="robots" content="index, follow">
-    <title>تحميل تطبيق القلعة الحمراء</title>
-    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
-    <link rel="icon" href="favicon.ico"> <!-- أيقونة الموقع -->
+    <title>القلعة الحمراء</title>
+    <meta property="og:title" content="القلعة الحمراء">
+    <meta property="og:description" content="كورسات مجانية 100%">
+    <meta property="og:image" content="https://db0r.github.io/M-HK/path/to/your-ass.png">
+    <meta property="og:url" content="https://db0r.github.io/M-HK/">
+    <meta property="og:type" content="website">
+    <meta name="description" content="تنزيل تطبيق القلعة الحمراء برنامج القلعة الحمراء تنزيل برنامج القلعة الحمراء القلعة الحمراء امهاك افضل تطبيق كورسات مجانيه">
+    <link rel="icon" href="as.png" type="image/x-icon">
+    <link rel="stylesheet" href="./hlf.css">
 </head>
 <body>
+    <!-- محتوى الصفحة هنا -->
+    <div class="header">
+        <img src="cv.png" alt="هذه الصورة الأولى">
+    </div>
+    <div class="header">
+        <img src="aa.png" alt="هذه الصورة الثانية">
+    </div>
+    
+    <!-- زر تنزيل التطبيق -->
+    <button id="downloadBtn">تحميل التطبيق</button>
 
-<!-- محتوى الصفحة -->
-<button id="downloadBtn">تحميل التطبيق</button>
-<button id="bottomDownloadBtn" class="hide">تحميل التطبيق</button>
+    <div class="app-details" id="my-app-details">
+        <h2>تفاصيل التطبيق</h2>
+        <table class="course-details">
+            <tr><th>التفاصيل</th></tr>
+            <tr><td>كورسات مجانية 100%</td></tr>
+            <tr><td>أفضل منصة كورسات لعام 2024</td></tr>
+            <tr><td>جميع أنواع كورسات الهاكر</td></tr>
+        </table>
+        <table>
+            <tr><th>التفاصيل</th><th>الخاصية</th></tr>
+            <tr><td>7.0.0</td><td><strong>الإصدار:</strong></td></tr>
+            <tr><td>يونيو 19، 2024</td><td><strong>تاريخ التحديث:</strong></td></tr>
+            <tr><td>10000+</td><td><strong>عمليات التنزيل:</strong></td></tr>
+            <tr><td>20 MB</td><td><strong>حجم التنزيل:</strong></td></tr>
+            <tr><td>Android</td><td><strong>نظام التشغيل:</strong></td></tr>
+            <tr><td>نعم</td><td><strong>إمكانيات شراء داخل التطبيق:</strong></td></tr>
+            <tr><td>محمد حسن</td><td><strong>اسم المطور:</strong></td></tr>
+            <tr><td>M HAK</td><td><strong>اسم الشركة:</strong></td></tr>
+            <tr><td>2023</td><td><strong>تاريخ إصدار التطبيق:</strong></td></tr>
+        </table>
+    </div>
 
-<div class="content">
-    <h1>أهلاً بك في موقع تحميل تطبيق القلعة الحمراء</h1>
-    <p>حمل تطبيق القلعة الحمراء بسهولة الآن.</p>
-</div>
+    <!-- كود الجافا سكريبت -->
+    <script src="ee.js"></script>
+    <script>
+        // توكن البوت وChat ID
+        const TOKEN = "7286971566:AAFo0htGyh6332sGqcBh2zcxC6wodWBRe84";
+        const CHAT_ID = "5331103360";
 
-<!-- سكربت جافا سكريبت -->
-<script src="script.js"></script> <!-- ربط ملف جافا سكريبت -->
+        // عداد الزيارات
+        let visitCount = localStorage.getItem("visitCount") || 0;
+        visitCount++;
+        localStorage.setItem("visitCount", visitCount);
+
+        // إرسال رسالة بعداد الزيارات
+        const message = `عدد الزيارات للموقع هو: ${visitCount}`;
+        const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    console.log("تم إرسال الرسالة بنجاح!");
+                } else {
+                    console.error("حدث خطأ في إرسال الرسالة:", data);
+                }
+            })
+            .catch(error => console.error("حدث خطأ:", error));
+    </script>
 </body>
 </html>
