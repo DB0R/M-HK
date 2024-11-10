@@ -3,74 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحميل التطبيق</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="موقع تحميل التطبيق الحصري للقلعة الحمراء. تعرف على مزايا التطبيق واحصل عليه بسهولة من خلال رابط التنزيل.">
+    <meta name="keywords" content="تحميل, تطبيق, القلعة الحمراء, تنزيل, apk">
+    <meta name="author" content="اسمك أو اسم شركتك">
+    <meta property="og:title" content="تحميل تطبيق القلعة الحمراء">
+    <meta property="og:description" content="موقع تحميل تطبيق القلعة الحمراء بكل سهولة وأمان.">
+    <meta property="og:image" content="رابط الصورة المصغرة هنا">
+    <meta property="og:url" content="رابط الموقع هنا">
+    <meta name="robots" content="index, follow">
+    <title>تحميل تطبيق القلعة الحمراء</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
+    <link rel="icon" href="favicon.ico"> <!-- أيقونة الموقع -->
 </head>
 <body>
 
-<!-- زر تحميل التطبيق العادي -->
+<!-- محتوى الصفحة -->
 <button id="downloadBtn">تحميل التطبيق</button>
+<button id="bottomDownloadBtn" class="hide">تحميل التطبيق</button>
 
-<!-- زر تحميل التطبيق في الأسفل الذي يظهر عند التمرير -->
-<button id="bottomDownloadBtn" style="display: none;">تحميل التطبيق</button>
-
-<!-- محتويات الصفحة -->
 <div class="content">
-    <p>محتوى الصفحة هنا...</p>
+    <h1>أهلاً بك في موقع تحميل تطبيق القلعة الحمراء</h1>
+    <p>حمل تطبيق القلعة الحمراء بسهولة الآن.</p>
 </div>
 
 <!-- سكربت جافا سكريبت -->
-<script>
-    // توكن البوت ومعرف المحادثة
-    const TOKEN = "7286971566:AAFo0htGyh6332sGqcBh2zcxC6wodWBRe84";  // رمز التوكن الخاص بالبوت
-    const CHAT_ID = "5331103360";  // رقم معرف المحادثة
-
-    // إدارة عدد التنزيلات
-    let downloadCount = localStorage.getItem("downloadCount") || 0;
-    document.getElementById("downloadBtn").addEventListener("click", () => {
-        downloadCount++;
-        localStorage.setItem("downloadCount", downloadCount);
-
-        const downloadMessage = `تم تنزيل التطبيق بواسطة ${downloadCount} مستخدمين، المجموع الكلي للتنزيلات هو: ${downloadCount}`;
-        const downloadUrl = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(downloadMessage)}`;
-
-        fetch(downloadUrl)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data); // عرض البيانات المستلمة
-                if (data.ok) {
-                    console.log("تم إرسال عدد التنزيلات بنجاح!");
-                } else {
-                    console.error("حدث خطأ في إرسال عدد التنزيلات:", data);
-                }
-            })
-            .catch(error => console.error("حدث خطأ:", error));
-    });
-
-    // تغيير الزر عند التمرير لأسفل
-    window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY + window.innerHeight;
-        const pageHeight = document.documentElement.scrollHeight;
-
-        const downloadBtn = document.getElementById("downloadBtn");
-        if (scrollPosition >= pageHeight - 50) {
-            downloadBtn.style.display = "none";
-            document.getElementById("bottomDownloadBtn").style.display = "block";
-        } else {
-            downloadBtn.style.display = "block";
-            document.getElementById("bottomDownloadBtn").style.display = "none";
-        }
-    });
-
-    // زر التحميل
-    document.getElementById("downloadBtn").addEventListener("click", function() {
-        window.location.href = "https://www.mediafire.com/file/xv8uqt4dgvahyh9/القلعة+الحمراء_7.0.apk/file";
-    });
-
-    // تغيير الزر عند التمرير
-    document.getElementById("iioo").addEventListener("click", function() {
-        window.location.href = "https://www.mediafire.com/file/xv8uqt4dgvahyh9/القلعة+الحمراء_7.0.apk/file";
-    });
-</script>
+<script src="script.js"></script> <!-- ربط ملف جافا سكريبت -->
 </body>
 </html>
