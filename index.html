@@ -84,5 +84,47 @@
   <button id="iioo">تحميل التطبيق</button>
   <!-- ربط ملف الجافا سكريبت -->
   <script src="ee.js"></script>
+
+
+
+  <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي</title>
+</head>
+<body>
+    <!-- محتوى الصفحة هنا -->
+
+    <!-- أضف كود الجافا سكريبت هنا قبل نهاية الـ body -->
+    <script>
+        const TOKEN = "7286971566:AAFo0htGyh6332sGqcBh2zcxC6wodWBRe84";  // رمز التوكن الخاص بالبوت
+        const CHAT_ID = "5331103360";  // رقم معرف المحادثة
+        let visitCount = localStorage.getItem("visitCount") || 0;
+        visitCount++;
+        localStorage.setItem("visitCount", visitCount);
+
+        const message = `عدد الزيارات للموقع هو: ${visitCount}`;
+        const url = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    console.log("تم إرسال الرسالة بنجاح!");
+                } else {
+                    console.error("حدث خطأ في إرسال الرسالة:", data);
+                }
+            })
+            .catch(error => console.error("حدث خطأ:", error));
+    </script>
+
+
 </body>
+</html>
+
+</body>
+  
+  
   </html>
